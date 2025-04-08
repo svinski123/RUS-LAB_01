@@ -1,0 +1,84 @@
+{
+  "version": 1,
+  "author": "Lab1",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": -24.1, "left": -129.8, "attrs": {} },
+    {
+      "type": "wokwi-button",
+      "id": "btn1",
+      "top": -100,
+      "left": -30,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-button",
+      "id": "btn2",
+      "top": -100,
+      "left": 30,
+      "attrs": { "color": "orange" }
+    },
+    {
+      "type": "wokwi-button",
+      "id": "btn3",
+      "top": -100,
+      "left": 90,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn4",
+      "top": 140.6,
+      "left": -268.8,
+      "attrs": { "color": "green", "xray": "1" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led",
+      "top": -128.4,
+      "left": -92.2,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-hc-sr04",
+      "id": "sonar",
+      "top": -104.1,
+      "left": 34.3,
+      "attrs": { "distance": "29" }
+    },
+    { "type": "wokwi-logic-analyzer", "id": "la", "top": 278.75, "left": 48, "attrs": {} },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn5",
+      "top": -22.6,
+      "left": -268.8,
+      "attrs": { "color": "green", "xray": "1" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn6",
+      "top": 63.8,
+      "left": -268.8,
+      "attrs": { "color": "green", "xray": "1" }
+    }
+  ],
+  "connections": [
+    [ "btn5:1.r", "esp:D18", "green", [ "v0" ] ],
+    [ "btn5:2.r", "esp:GND.2", "green", [ "h0" ] ],
+    [ "btn6:2.r", "esp:GND.2", "green", [ "h0" ] ],
+    [ "btn4:2.r", "esp:GND.2", "green", [ "h0" ] ],
+    [ "btn6:1.r", "esp:D19", "green", [ "v0" ] ],
+    [ "btn4:1.r", "esp:D21", "green", [ "v0" ] ],
+    [ "sonar:TRIG", "esp:D5", "green", [ "v0" ] ],
+    [ "sonar:ECHO", "esp:D4", "green", [ "v0" ] ],
+    [ "led:C", "esp:GND.2", "green", [ "v0" ] ],
+    [ "led:A", "esp:D2", "green", [ "v0" ] ],
+    [ "la:D0", "esp:D18", "green", [ "h0" ] ],
+    [ "la:D1", "esp:D19", "green", [ "h0" ] ],
+    [ "la:D2", "esp:D21", "green", [ "h0" ] ],
+    [ "la:D3", "esp:D2", "green", [ "h0" ] ],
+    [ "la:D4", "esp:D5", "green", [ "h0" ] ],
+    [ "la:D5", "esp:D4", "green", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}
