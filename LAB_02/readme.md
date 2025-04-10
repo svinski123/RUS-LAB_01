@@ -1,5 +1,8 @@
 # Automatizirano kuhalo za kavu – ESP32
 
+![shema](https://github.com/user-attachments/assets/2889451e-04c3-4aca-8e70-01342b01d59e)
+
+
 Projekt predstavlja simulaciju automatiziranog kuhala za kavu pomoću ESP32 mikrokontrolera. Sustav provjerava razinu vode, prisutnost kave, mjeri temperaturu, prikazuje status putem LED-ica i koristi energetski učinkovite režime rada.
 
 ## Opis rada
