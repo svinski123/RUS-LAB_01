@@ -43,7 +43,6 @@ Uređaj koristi ultrazvučni senzor za mjerenje razine vode, tipkalo za detekcij
 5. Nakon završetka:
     - Sve LED-ice se gase
     - Uređaj ulazi u deep sleep
-6. Novi ciklus se pokreće pritiskom na tipkalo
 
 ## FAST_TEST način
 
