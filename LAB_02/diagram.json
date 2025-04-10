@@ -1,0 +1,97 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 244.84, "attrs": {} },
+    {
+      "type": "wokwi-rgb-led",
+      "id": "rgb1",
+      "top": -116.2,
+      "left": 29.1,
+      "rotate": 270,
+      "attrs": { "common": "cathode" }
+    },
+    {
+      "type": "wokwi-rgb-led",
+      "id": "rgb2",
+      "top": -68.2,
+      "left": 29.1,
+      "rotate": 270,
+      "attrs": { "common": "cathode" }
+    },
+    {
+      "type": "wokwi-rgb-led",
+      "id": "rgb3",
+      "top": -10.6,
+      "left": 29.1,
+      "rotate": 270,
+      "attrs": { "common": "cathode" }
+    },
+    {
+      "type": "wokwi-rgb-led",
+      "id": "rgb4",
+      "top": 123.8,
+      "left": 29.1,
+      "rotate": 270,
+      "attrs": { "common": "cathode" }
+    },
+    {
+      "type": "wokwi-rgb-led",
+      "id": "rgb5",
+      "top": 171.8,
+      "left": 29.1,
+      "rotate": 270,
+      "attrs": { "common": "cathode" }
+    },
+    {
+      "type": "wokwi-rgb-led",
+      "id": "rgb6",
+      "top": 267.8,
+      "left": 29.1,
+      "rotate": 270,
+      "attrs": { "common": "cathode" }
+    },
+    {
+      "type": "wokwi-hc-sr04",
+      "id": "ultrasonic1",
+      "top": -142.5,
+      "left": 379.9,
+      "attrs": { "distance": "60" }
+    },
+    {
+      "type": "wokwi-ntc-temperature-sensor",
+      "id": "ntc1",
+      "top": -199,
+      "left": 66.6,
+      "attrs": {}
+    },
+    { "type": "wokwi-slide-switch", "id": "sw1", "top": 33.2, "left": -188.9, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "rgb1:B", "esp:13", "green", [ "h105.6", "v257.6" ] ],
+    [ "rgb2:B", "esp:12", "green", [ "h67.2", "v75.2", "h57.6", "v115.2" ] ],
+    [ "rgb3:B", "esp:14", "green", [ "h86.4", "v123.2" ] ],
+    [ "rgb2:COM", "esp:GND.2", "green", [ "v0" ] ],
+    [ "rgb1:COM", "esp:GND.2", "green", [ "v0" ] ],
+    [ "rgb3:COM", "esp:GND.2", "green", [ "v0" ] ],
+    [ "rgb4:R", "esp:27", "green", [ "h48", "v-48" ] ],
+    [ "rgb5:R", "esp:26", "green", [ "h38.4", "v-105.6" ] ],
+    [ "rgb4:COM", "esp:GND.2", "green", [ "v0" ] ],
+    [ "rgb5:COM", "esp:GND.2", "green", [ "v0" ] ],
+    [ "rgb6:G", "esp:25", "green", [ "h57.6", "v-193.3" ] ],
+    [ "rgb6:COM", "esp:GND.2", "green", [ "v0" ] ],
+    [ "ultrasonic1:TRIG", "esp:5", "green", [ "v0" ] ],
+    [ "ultrasonic1:ECHO", "esp:18", "green", [ "v0" ] ],
+    [ "ntc1:OUT", "esp:34", "green", [ "v105.5", "h47.85" ] ],
+    [ "ntc1:VCC", "esp:3V3", "red", [ "h0" ] ],
+    [ "ntc1:GND", "esp:GND.2", "black", [ "h0" ] ],
+    [ "sw1:3", "esp:33", "green", [ "v0" ] ],
+    [ "sw1:2", "esp:GND.2", "green", [ "v0" ] ],
+    [ "ultrasonic1:GND", "esp:GND.2", "black", [ "v0" ] ],
+    [ "ultrasonic1:VCC", "esp:5V", "red", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
